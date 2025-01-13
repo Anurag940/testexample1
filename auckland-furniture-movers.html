@@ -30,7 +30,7 @@
         transition: background-color 0.3s ease;
     }
     #mainHeader.scrolled {
-        background-color: #212529; /* Bootstrap's .bg-dark color */
+        background-color: #0d296b; /* Bootstrap's .bg-dark color */
     }
 
     /* Padding for the hero so content isn't behind the header. */
@@ -100,98 +100,175 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-bg-swirls"></div>
-        <div class="container hero-content text-center">
-            <h2 class="hero-title" style="margin-top: 80px; font-size: 3rem; font-weight: 700; ">Dewandran Transport Limited</h2>
+    <section class="hero-section" style="background-image: url('https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no'); background-size: cover; background-position: center; height: 100vh; position: relative;">
+        <!-- Background overlay to adjust opacity -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);"></div>
+    
+        <!-- Hero content container -->
+        <div class="container hero-content text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; color: white;">
+            <h2 class="hero-title" style="font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 0; padding: 20px;">
+                DEWANDRAN TRANSPORT LIMITED
+            </h2>
+            <a href="#services" style="display: inline-block; padding: 10px 20px; background-color: #0d296b; color: white; font-size: 1.2rem; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: background-color 0.3s;">
+               Read More
+            </a>
         </div>
     </section>
+    
+    
 
     <!-- Main Content -->
-    <main style="background-color: #291774;">
+    <main style="background-color: #ffffff;">
         <div class="container py-5" style="margin-top:0;">
             <!-- First Section -->
-            <div class="row justify-content-center mb-5">
+            <div id="services" class="row justify-content-center mb-5" style="min-height: 100vh; display: flex; align-items: center;">
                 <div class="col-lg-10 col-xl-8">
-                    <div class="card border-0 shadow-lg mb-4" style="border-radius: 2rem; overflow: hidden;">
-                        <div class="card-body p-4 p-md-5" style="background: linear-gradient(120deg, #0e1d3f 0%, #2a1459 100%); border-radius: 2rem; position: relative;">
-                            <img src="https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no"
-                                class="img-fluid mx-auto d-block rounded-3 shadow-sm mb-4" 
-                                style="transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 0.5rem;" 
-                                alt="Auckland Furniture Movers" 
-                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.2)';" 
-                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-                            
-                            <h2 class="mb-3" style="font-size: 2rem; font-weight: 700; color: #ffffff; text-align: center; text-transform: capitalize;">Expert Auckland Furniture Moving Services</h2>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem;">Relocating furniture can be a challenging task, but with the help of <a href="https://www.dewandrantransport.co.nz/"> Auckland furniture movers</a>, the process becomes seamless and efficient. These professionals specialize in safely transporting furniture, ensuring that every piece is handled with care from start to finish. Whether it’s a small piece or a large, heavy item, Auckland furniture movers are equipped to manage all your moving needs.</p>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem;">What sets Auckland furniture movers apart is their commitment to excellence. They understand the value of your belongings and work diligently to protect them during the move. With specialized equipment and trained staff, they can handle delicate and bulky items alike, providing peace of mind throughout the relocation process. Their expertise and professionalism make them the ideal choice for furniture moves in Auckland.</p>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem;">By choosing Auckland furniture movers, you ensure that your furniture is transported safely and efficiently. Their dedication to customer satisfaction and attention to detail means that every item arrives in perfect condition. For a stress-free moving experience, trust Auckland furniture movers to handle your furniture with the utmost care and precision.
-</p>
-                            <img src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no"
-                                class="img-fluid mx-auto d-block rounded-3 shadow-sm mt-4" 
-                                style="transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 0.5rem;" 
-                                alt="Auckland Furniture Moving Services" 
-                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.2)';" 
-                                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-                        </div>
+                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; height: 100%; display: flex; flex-direction: column; ">
+                        
+                        <!-- First Image -->
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no" 
+                            class="img-fluid mx-auto d-block rounded-3 shadow-sm mb-4" 
+                            style="transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 0.5rem;" 
+                            alt="Auckland Furniture Movers" 
+                            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.2)';" 
+                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+                        
+                        <!-- Heading -->
+                        <h2 class="mb-3" style="font-size: 2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize;">
+                            Expert Auckland Furniture Moving Services
+                        </h2>
+                        
+                        <!-- Paragraphs -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
+                            Relocating furniture can be a challenging task, but with the help of 
+                            <a href="https://www.dewandrantransport.co.nz/" style="color: #0d6efd; text-decoration: none;">Auckland furniture movers</a>, 
+                            the process becomes seamless and efficient. These professionals specialize in safely transporting furniture, ensuring that every piece is handled with care from start to finish. Whether it’s a small piece or a large, heavy item, Auckland furniture movers are equipped to manage all your moving needs.
+                        </p>
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
+                            What sets Auckland furniture movers apart is their commitment to excellence. They understand the value of your belongings and work diligently to protect them during the move. With specialized equipment and trained staff, they can handle delicate and bulky items alike, providing peace of mind throughout the relocation process. Their expertise and professionalism make them the ideal choice for furniture moves in Auckland.
+                        </p>
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
+                            By choosing Auckland furniture movers, you ensure that your furniture is transported safely and efficiently. Their dedication to customer satisfaction and attention to detail means that every item arrives in perfect condition. For a stress-free moving experience, trust Auckland furniture movers to handle your furniture with the utmost care and precision.
+                        </p>
+                        
+                        <!-- Second Image -->
+                        <img src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no" 
+                            class="img-fluid mx-auto d-block rounded-3 shadow-sm mt-4" 
+                            style="transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 0.5rem;" 
+                            alt="Auckland Furniture Moving Services" 
+                            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.2)';" 
+                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
                     </div>
                 </div>
             </div>
+            
+            
+            
 
             <!-- Second Section -->
-            <div class="row justify-content-center mb-5">
+             <!-- ithe kita ik change -->
+             <div class="row justify-content-center mb-5">
                 <div class="col-lg-10 col-xl-8">
-                    <div class="card border-0 shadow-lg mb-4" style="border-radius: 2rem; overflow: hidden;">
-                        <div class="card-body p-4 p-md-5" style="background: linear-gradient(120deg, #0e1d3f 0%, #2a1459 100%); border-radius: 2rem; position: relative; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-                            <h2 class="mb-3" style="font-size: 2rem; font-weight: 600; color: #ffffff;">Reliable Furniture Movers in Auckland</h2>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">What makes Auckland furniture movers reliable is their focus on customer satisfaction. They take the time to understand your specific needs and create a customized plan to ensure your furniture is moved safely. From fragile antiques to large modern pieces, they have the expertise to handle it all. Their professional approach ensures that your move is completed on time and without any issues.</p>
-                            <div class="row align-items-center mb-4">
-                                <div class="col-md-6">
-                                    <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify;">What makes Auckland movers the preferred choice is their commitment to providing a seamless experience. They understand the challenges of moving and address them proactively with tailored solutions. From fragile items to bulky furniture, they have the skills and equipment to handle it all. Their goal is to ensure that your move is completed without any unnecessary complications.</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-16x9 mx-auto" style="border-radius: 1rem; overflow: hidden; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);">
-                                        <iframe src="https://video.wixstatic.com/video/9debaf_202e67a9b3e540b889199bb5f7bcd3a8/1080p/mp4/file.mp4" frameborder="0" allowfullscreen></iframe>
-                                    </div>
+                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; ">
+                    
+                        <!-- Heading with glow effect -->
+                        <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color: #0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
+                            Reliable Furniture Movers in Auckland
+                        </h2>
+            
+                        <!-- Full-width Paragraph -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
+                            What makes Auckland furniture movers reliable is their focus on customer satisfaction. They take the time to understand your specific needs and create a customized plan to ensure your furniture is moved safely. From fragile antiques to large modern pieces, they have the expertise to handle it all. Their professional approach ensures that your move is completed on time and without any issues.
+                        </p>
+            
+                        <!-- Side-by-side Layout for Text and Video -->
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-6">
+                                <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify;">
+                                    What makes Auckland movers the preferred choice is their commitment to providing a seamless experience. They understand the challenges of moving and address them proactively with tailored solutions. From fragile items to bulky furniture, they have the skills and equipment to handle it all. Their goal is to ensure that your move is completed without any unnecessary complications.
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ratio ratio-16x9" style="border-radius: 1rem; overflow: hidden; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);">
+                                    <iframe src="https://video.wixstatic.com/video/9debaf_202e67a9b3e540b889199bb5f7bcd3a8/1080p/mp4/file.mp4" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">Choosing Auckland furniture movers guarantees a hassle-free relocation. Their dedication to providing reliable service means that your belongings are always in safe hands. Whether it’s a local move or a longer distance, these movers deliver outstanding results, making them a trusted choice for furniture moves in Auckland.</p>
-                
                         </div>
+            
+                        <!-- Full-width Paragraph -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify;">
+                            Choosing Auckland furniture movers guarantees a hassle-free relocation. Their dedication to providing reliable service means that your belongings are always in safe hands. Whether it’s a local move or a longer distance, these movers deliver outstanding results, making them a trusted choice for furniture moves in Auckland.
+                        </p>
                     </div>
                 </div>
             </div>
+            
+            
+            
 
             <!-- Third Section -->
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-10 col-xl-8">
-                    <div class="card border-0 shadow-sm mb-4" style="border-radius: 2rem; overflow: hidden;">
-                        <div class="card-body p-4 p-md-5" style="background: linear-gradient(120deg, #0e1d3f 0%, #2a1459 100%); border-radius: 2rem; position: relative;">
-                            <h2 class="mb-3" style="font-size: 2rem; font-weight: 600; color: #ffffff;">Professional Care for Furniture Moves</h2>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">When it comes to relocating your furniture, Auckland furniture movers offer professional care and exceptional service. They understand the challenges of moving furniture and are committed to ensuring that every piece is transported safely and securely. Auckland furniture movers bring the expertise and tools needed to handle even the most complex moves, making the process stress-free for their clients.</p>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">One of the standout features of Auckland furniture movers is their attention to detail. They take great care in packing, loading, and transporting your furniture to prevent any damage. Whether it’s a single item or an entire home’s worth of furniture, their team works with precision to ensure everything arrives in perfect condition. Their professionalism sets them apart as leaders in the industry.</p>
-                            <p style="font-size: 1rem; line-height: 1.8; color: #ffffff; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">By hiring Auckland furniture movers, you can trust that your furniture is in capable hands. Their focus on providing professional care and delivering top-notch service ensures a smooth moving experience. For anyone looking for reliable and experienced furniture movers in Auckland, these professionals are the perfect choice.</p>
-                        </div>
+                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; ">
+                    
+                        <!-- Heading with glow effect -->
+                        <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
+                            Professional Care for Furniture Moves
+                        </h2>
+                        
+                        <!-- Paragraph 1 -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
+                            <i class="fas fa-truck-moving" style="color: #0e1d3f; margin-right: 8px;"></i>
+                            When it comes to relocating your furniture, Auckland furniture movers offer professional care and exceptional service. They understand the challenges of moving furniture and are committed to ensuring that every piece is transported safely and securely. Auckland furniture movers bring the expertise and tools needed to handle even the most complex moves, making the process stress-free for their clients.
+                        </p>
+                        
+                        <!-- Paragraph 2 -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
+                            <i class="fas fa-cogs" style="color: #0e1d3f; margin-right: 8px;"></i>
+                            One of the standout features of Auckland furniture movers is their attention to detail. They take great care in packing, loading, and transporting your furniture to prevent any damage. Whether it’s a single item or an entire home’s worth of furniture, their team works with precision to ensure everything arrives in perfect condition. Their professionalism sets them apart as leaders in the industry.
+                        </p>
+                        
+                        <!-- Paragraph 3 -->
+                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
+                            <i class="fas fa-thumbs-up" style="color: #0e1d3f; margin-right: 8px;"></i>
+                            By hiring Auckland furniture movers, you can trust that your furniture is in capable hands. Their focus on providing professional care and delivering top-notch service ensures a smooth moving experience. For anyone looking for reliable and experienced furniture movers in Auckland, these professionals are the perfect choice.
+                        </p>
                     </div>
                 </div>
             </div>
+            
+            
+            
 
             <!-- Fourth Section / Map / Business Info -->
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-xl-8">
-                    <div class="card border-0 shadow-lg mb-4" style="border-radius: 2rem; overflow: hidden;">
-                        <div class="card-body p-4 p-md-5" style="background: linear-gradient(135deg, #0e1d3f, #2a1459); border-radius: 2rem;">
-                            <h2 class="mb-3" style="font-size: 2rem; font-weight: 600; color: #ffffff;">Dewandran Transport Limited</h2>
+                    
+                            <!-- Heading with glow effect -->
+                            <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
+                                Dewandran Transport Limited
+                            </h2>
+            
+                            <!-- Google Maps Embed -->
                             <div class="mb-4 ratio ratio-16x9">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12420396.41023212!2d172.48833!3d-40.534445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef0c00c1a19e9%3A0xe981df8c58dc8356!2sDewandran%20Transport%20Ltd!5e0!3m2!1sen!2sin!4v1735044584495!5m2!1sen!2sin" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
-                            <p class="fw-bold" style="color: #ffffff;">Dewandran Transport Limited</p>
-                            <p style="color: #ffffff;">Auckland, New Zealand</p>
-                            <p style="color: #ffffff;">800685676 / 021701304</p>
+            
+                            <!-- Contact Information -->
+                            <p class="fw-bold" style="color: #000000;">
+                                <i class="fas fa-truck" style="color: #0e1d3f; margin-right: 8px;"></i>Dewandran Transport Limited
+                            </p>
+                            <p style="color: #000000;">
+                                <i class="fas fa-map-marker-alt" style="color: #0e1d3f; margin-right: 8px;"></i>Auckland, New Zealand
+                            </p>
+                            <p style="color: #000000;">
+                                <i class="fas fa-phone-alt" style="color: #0e1d3f; margin-right: 8px;"></i>800685676 / 021701304
+                            </p>
                         </div>
                     </div>
-                </div>
-            </div>
+                
+            
+            
 
         </div>
     </main>
