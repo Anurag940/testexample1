@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="text-center">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
@@ -14,260 +14,336 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <style>
-    /* Remove the top margin so hero can merge with header. */
     body {
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", serif;
+        background-color: #fff;
+        color: #000;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover {
+        color: #e67e22;
     }
 
-    /* The header is fixed, starts transparent, and transitions to dark. */
-    #mainHeader {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-        background-color: transparent;
-        transition: background-color 0.3s ease;
+    /* White header bar with site name & nav links, plus icons on right */
+    .main-header {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
-    #mainHeader.scrolled {
-        background-color: #0d296b; /* Bootstrap's .bg-dark color */
+    .main-header .site-title {
+        font-size: 2rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    .main-header nav a {
+        margin: 0 1rem;
+        font-size: 1rem;
+        color: #000;
+    }
+    .main-header nav a:hover {
+        color: #e67e22;
+    }
+    .main-header .icons a {
+        color: #000;
+        margin-left: 1rem;
+        font-size: 1.3rem;
     }
 
-    /* Padding for the hero so content isn't behind the header. */
-    .hero-section {
-        padding-top: 100px; 
-        position: relative;
-        color: #fff;
+    /* Hero row: 3 columns with spacing */
+    .hero-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .hero-col {
+        flex: 1;
+        min-width: 200px;
+        height: 70vh; 
         overflow: hidden;
-        background: linear-gradient(120deg, #11265e 0%, #3f0a87 100%);
-        min-height: 400px; /* Just to ensure a nice tall hero */
+        position: relative;
+        margin-right: 2px; /* spacing between columns */
     }
-    .hero-bg-swirls {
-        position: absolute;
-        top: 0;
-        left: 0;
+    .hero-col:last-child {
+        margin-right: 0;
+    }
+    .hero-col img {
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        z-index: 0;
+        object-fit: cover;
+        display: block;
     }
-    .hero-bg-swirls::before {
-        content: "";
-        position: absolute;
-        width: 60vh;
-        height: 60vh;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        top: -10vh;
-        left: -10vh;
+
+    /* Big center text below images */
+    .centered-text {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: bold;
     }
-    .hero-bg-swirls::after {
-        content: "";
-        position: absolute;
-        width: 70vh;
-        height: 70vh;
-        background: rgba(255, 255, 255, 0.07);
-        border-radius: 50%;
-        bottom: -20vh;
-        right: -20vh;
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 2rem 0;
+        margin-top: 3rem;
     }
-    .hero-content {
-        position: relative;
-        z-index: 1; /* on top of swirl shapes */
+    footer a {
+        color: #fff;
     }
-    .hero-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
+    footer a:hover {
+        color: #e67e22;
     }
     </style>
 </head>
-<body class="bg-dark text-dark">
+<body>
 
-    <!-- Header that merges with hero but becomes dark on scroll -->
-    <header id="mainHeader" class="text-white py-3 d-flex align-items-center">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="text-start mb-0">
-                <a href="auckland-furniture-movers.html" class="text-white text-decoration-none">Auckland Furniture Movers</a>
-            </h1>
-            <div>
-                <a href="#" class="text-white me-3"><i class="bi bi-facebook" style="font-size: 1.5rem;"></i></a>
-                <a href="#" class="text-white me-3"><i class="bi bi-twitter" style="font-size: 1.5rem;"></i></a>
-                <a href="#" class="text-white me-3"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
-                <a href="#" class="text-white"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-            </div>
-        </div>
-    </header>
+<!-- White header bar (with responsive nav) -->
+<header class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+  <div class="container-fluid">
+    <!-- Site Title (Left side) -->
+    <a class="navbar-brand fw-bold" href="#">Auckland Furniture Movers</a>
 
-    <!-- Hero Section -->
-    <section class="hero-section" style="background-image: url('https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no'); background-size: cover; background-position: center; height: 100vh; position: relative;">
-        <!-- Background overlay to adjust opacity -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);"></div>
-    
-        <!-- Hero content container -->
-        <div class="container hero-content text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; color: white;">
-            <h2 class="hero-title" style="font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 0; padding: 20px;">
-                DEWANDRAN TRANSPORT LIMITED
-            </h2>
-            <a href="#services" style="display: inline-block; padding: 10px 20px; background-color: #0d296b; color: white; font-size: 1.2rem; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: background-color 0.3s;">
-               Read More
-            </a>
-        </div>
-    </section>
-    
-    
+    <!-- The hamburger / toggler button (for small screens) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Main Content -->
-    <main style="background-color: #ffffff;">
-        <div class="container py-5" style="margin-top:0;">
-            <!-- First Section -->
-            <div id="services" class="row justify-content-center mb-5" style="min-height: 100vh; display: flex; align-items: center;">
-                <div class="col-lg-10 col-xl-8">
-                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; height: 100%; display: flex; flex-direction: column; ">
-                        
-                        <!-- Heading -->
-                        <h2 class="mb-3" style="font-size: 2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize;">
-                            Expert Auckland Furniture Moving Services
-                        </h2>
-                        
-                        <!-- Paragraphs -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
-                            Relocating furniture can be a challenging task, but with the help of 
-                            <a href="https://www.dewandrantransport.co.nz/" style="color: #0d6efd; text-decoration: none;">Auckland furniture movers</a>, 
-                            the process becomes seamless and efficient. These professionals specialize in safely transporting furniture, ensuring that every piece is handled with care from start to finish. Whether it’s a small piece or a large, heavy item, Auckland furniture movers are equipped to manage all your moving needs.
-                        </p>
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
-                            What sets Auckland furniture movers apart is their commitment to excellence. They understand the value of your belongings and work diligently to protect them during the move. With specialized equipment and trained staff, they can handle delicate and bulky items alike, providing peace of mind throughout the relocation process. Their expertise and professionalism make them the ideal choice for furniture moves in Auckland.
-                        </p>
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem;">
-                            By choosing Auckland furniture movers, you ensure that your furniture is transported safely and efficiently. Their dedication to customer satisfaction and attention to detail means that every item arrives in perfect condition. For a stress-free moving experience, trust Auckland furniture movers to handle your furniture with the utmost care and precision.
-                        </p>
-                        
-                        <!-- Second Image -->
-                        <img src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no" 
-                            class="img-fluid mx-auto d-block rounded-3 shadow-sm mt-4" 
-                            style="transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 0.5rem;" 
-                            alt="Auckland Furniture Moving Services" 
-                            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0, 0, 0, 0.2)';" 
-                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
+    <!-- Collapsible nav links + icons -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <!-- Nav links -->
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">My Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Social icons -->
+      <div class="d-flex align-items-center">
+        <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size:1.3rem;"></i></a>
+        <a href="#" class="text-dark me-3"><i class="bi bi-instagram" style="font-size:1.3rem;"></i></a>
+        <a href="#" class="text-dark me-3"><i class="bi bi-twitter" style="font-size:1.3rem;"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-pinterest" style="font-size:1.3rem;"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Desktop row with 3 columns, each forced to a different height -->
+<div 
+  class="hero-row d-none d-md-flex" 
+  style="
+    display: flex; 
+    align-items: flex-start; /* allow columns of different heights */
+    margin: 0; 
+    padding: 0;
+  "
+>
+  <!-- LEFT: taller -->
+  <div 
+    style="
+      width: 33.2%;    /* or flex:1 if you prefer */
+      height: 450px;     /* forced taller */
+      overflow: hidden;  
+      margin-right: 2px; 
+    "
+  >
+    <img 
+      src="https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no" 
+      alt="Hero Image 1" 
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      "
+    >
+  </div>
+
+  <!-- MIDDLE: shorter -->
+  <div 
+    style="
+      width: 33.2%;
+      height: 400px;     /* forced shorter */
+      overflow: hidden;
+      margin-right: 2px;
+    "
+  >
+    <img 
+      src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no" 
+      alt="Hero Image 2" 
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      "
+    >
+  </div>
+
+  <!-- RIGHT: taller -->
+  <div 
+    style="
+      width: 33.2%;
+      height: 450px;     /* forced taller */
+      overflow: hidden;
+    "
+  >
+    <img 
+      src="https://lh5.googleusercontent.com/p/AF1QipPAkGjCN0FmFY85qc2qjtj4YOCp29q83M5Qo5nw=s1808-k-no" 
+      alt="Hero Image 3" 
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      "
+    >
+  </div>
+</div>
+
+<!-- Bootstrap Carousel: visible on small screens only, hidden on md+ -->
+<div 
+  id="heroCarousel" 
+  class="carousel slide d-block d-md-none" 
+  data-bs-ride="carousel"
+  style="max-height:450px; overflow:hidden;"
+>
+  
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <!-- Slide 1: active by default -->
+    <div class="carousel-item active">
+      <img 
+        src="https://lh5.googleusercontent.com/p/AF1QipMs6gNKCrl-wW8k5ztogLaMgDi_yaoyGgUMV4gC=w812-h456-k-no" 
+        alt="Hero Image 1" 
+        class="d-block w-100" 
+        style="object-fit:cover; height:450px;"
+      >
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img 
+        src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no" 
+        alt="Hero Image 2" 
+        class="d-block w-100"
+        style="object-fit:cover; height:450px;"
+      >
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img 
+        src="https://lh5.googleusercontent.com/p/AF1QipM_VfhYcsgRiWp9y0Okck3YX5Paoj1ZLSAoJsal=w609-h339-k-no" 
+        alt="Hero Image 3" 
+        class="d-block w-100"
+        style="object-fit:cover; height:450px;"
+      >
+    </div>
+  </div>
+
+  <!-- Carousel controls (arrows) -->
+  <button 
+    class="carousel-control-prev" 
+    type="button" 
+    data-bs-target="#heroCarousel" 
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button 
+    class="carousel-control-next" 
+    type="button" 
+    data-bs-target="#heroCarousel" 
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <!-- Big center text below images -->
+    <div class="centered-text">Dewandran Transport Limited</div>
+
+    <main class="container mb-5">
+        <section id="home">
+            <h2 class="font-weight-bold">Expert Auckland Furniture Moving Services</h2>
+            <p>Relocating furniture can be a challenging task, but with the help of <a href="https://www.dewandrantransport.co.nz/"> Auckland furniture movers</a>, the process becomes seamless and efficient. These professionals specialize in safely transporting furniture, ensuring that every piece is handled with care from start to finish. Whether it’s a small piece or a large, heavy item, Auckland furniture movers are equipped to manage all your moving needs.</p>
+            <p>What sets Auckland furniture movers apart is their commitment to excellence. They understand the value of your belongings and work diligently to protect them during the move. With specialized equipment and trained staff, they can handle delicate and bulky items alike, providing peace of mind throughout the relocation process. Their expertise and professionalism make them the ideal choice for furniture moves in Auckland.</p>
+            <p>By choosing Auckland furniture movers, you ensure that your furniture is transported safely and efficiently. Their dedication to customer satisfaction and attention to detail means that every item arrives in perfect condition. For a stress-free moving experience, trust Auckland furniture movers to handle your furniture with the utmost care and precision.
+</p>
+        </section>
+
+        <!-- Keep h2_2 as is, but arrange the video and a paragraph side by side -->
+        <section id="blog" class="mt-5 text-center font-weight-bold">
+            <h2 class="font-weight-bold mt-5 mb-3">Reliable Furniture Movers in Auckland</h2>
+
+            <!-- Two-column layout for video and paragraph -->
+            <div class="row align-items-start">
+                <!-- Left column: video -->
+                <div class="col-md-6 mb-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://video.wixstatic.com/video/9debaf_202e67a9b3e540b889199bb5f7bcd3a8/1080p/mp4/file.mp4" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>
-            
-            
-            
-
-            <!-- Second Section -->
-             <!-- ithe kita ik change -->
-             <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 col-xl-8">
-                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; ">
-                    
-                        <!-- Heading with glow effect -->
-                        <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color: #0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
-                            Reliable Furniture Movers in Auckland
-                        </h2>
-            
-                        <!-- Full-width Paragraph -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
-                            What makes Auckland furniture movers reliable is their focus on customer satisfaction. They take the time to understand your specific needs and create a customized plan to ensure your furniture is moved safely. From fragile antiques to large modern pieces, they have the expertise to handle it all. Their professional approach ensures that your move is completed on time and without any issues.
-                        </p>
-            
-                        <!-- Side-by-side Layout for Text and Video -->
-                        <div class="row align-items-center mb-4">
-                            <div class="col-md-6">
-                                <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify;">
-                                    What makes Auckland movers the preferred choice is their commitment to providing a seamless experience. They understand the challenges of moving and address them proactively with tailored solutions. From fragile items to bulky furniture, they have the skills and equipment to handle it all. Their goal is to ensure that your move is completed without any unnecessary complications.
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="ratio ratio-16x9" style="border-radius: 1rem; overflow: hidden; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);">
-                                    <iframe src="https://video.wixstatic.com/video/9debaf_202e67a9b3e540b889199bb5f7bcd3a8/1080p/mp4/file.mp4" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <!-- Full-width Paragraph -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify;">
-                            Choosing Auckland furniture movers guarantees a hassle-free relocation. Their dedication to providing reliable service means that your belongings are always in safe hands. Whether it’s a local move or a longer distance, these movers deliver outstanding results, making them a trusted choice for furniture moves in Auckland.
-                        </p>
-                    </div>
+                <!-- Right column: paragraph[5] -->
+                <div class="col-md-6 text-start">
+                    <p>What makes Auckland furniture movers reliable is their focus on customer satisfaction. They take the time to understand your specific needs and create a customized plan to ensure your furniture is moved safely. From fragile antiques to large modern pieces, they have the expertise to handle it all. Their professional approach ensures that your move is completed on time and without any issues.</p>
+                    <p>What makes Auckland movers the preferred choice is their commitment to providing a seamless experience. They understand the challenges of moving and address them proactively with tailored solutions. From fragile items to bulky furniture, they have the skills and equipment to handle it all. Their goal is to ensure that your move is completed without any unnecessary complications.</p>
+                    <p>Choosing Auckland furniture movers guarantees a hassle-free relocation. Their dedication to providing reliable service means that your belongings are always in safe hands. Whether it’s a local move or a longer distance, these movers deliver outstanding results, making them a trusted choice for furniture moves in Auckland.</p>
                 </div>
             </div>
-            
-            
-            
+        </section>
 
-            <!-- Third Section -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-10 col-xl-8">
-                    <div class="p-4 p-md-5" style="background: #ffffff; border-radius: 2rem; position: relative; ">
-                    
-                        <!-- Heading with glow effect -->
-                        <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
-                            Professional Care for Furniture Moves
-                        </h2>
-                        
-                        <!-- Paragraph 1 -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
-                            <i class="fas fa-truck-moving" style="color: #0e1d3f; margin-right: 8px;"></i>
-                            When it comes to relocating your furniture, Auckland furniture movers offer professional care and exceptional service. They understand the challenges of moving furniture and are committed to ensuring that every piece is transported safely and securely. Auckland furniture movers bring the expertise and tools needed to handle even the most complex moves, making the process stress-free for their clients.
-                        </p>
-                        
-                        <!-- Paragraph 2 -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
-                            <i class="fas fa-cogs" style="color: #0e1d3f; margin-right: 8px;"></i>
-                            One of the standout features of Auckland furniture movers is their attention to detail. They take great care in packing, loading, and transporting your furniture to prevent any damage. Whether it’s a single item or an entire home’s worth of furniture, their team works with precision to ensure everything arrives in perfect condition. Their professionalism sets them apart as leaders in the industry.
-                        </p>
-                        
-                        <!-- Paragraph 3 -->
-                        <p style="font-size: 1rem; line-height: 1.8; color: #000000; text-align: justify; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif;">
-                            <i class="fas fa-thumbs-up" style="color: #0e1d3f; margin-right: 8px;"></i>
-                            By hiring Auckland furniture movers, you can trust that your furniture is in capable hands. Their focus on providing professional care and delivering top-notch service ensures a smooth moving experience. For anyone looking for reliable and experienced furniture movers in Auckland, these professionals are the perfect choice.
-                        </p>
-                    </div>
-                </div>
+        <section id="about" class="mt-5">
+            <h2 class="font-weight-bold mt-5">Professional Care for Furniture Moves</h2>
+            <p>When it comes to relocating your furniture, Auckland furniture movers offer professional care and exceptional service. They understand the challenges of moving furniture and are committed to ensuring that every piece is transported safely and securely. Auckland furniture movers bring the expertise and tools needed to handle even the most complex moves, making the process stress-free for their clients.</p>
+            <p>One of the standout features of Auckland furniture movers is their attention to detail. They take great care in packing, loading, and transporting your furniture to prevent any damage. Whether it’s a single item or an entire home’s worth of furniture, their team works with precision to ensure everything arrives in perfect condition. Their professionalism sets them apart as leaders in the industry.</p>
+            <p>By hiring Auckland furniture movers, you can trust that your furniture is in capable hands. Their focus on providing professional care and delivering top-notch service ensures a smooth moving experience. For anyone looking for reliable and experienced furniture movers in Auckland, these professionals are the perfect choice.</p>
+        </section>
+
+        <!-- Center the business info -->
+        <section id="contact" class="mt-5 text-center">
+            <h2 class="font-weight-bold mt-5">Dewandran Transport Limited</h2>
+            <div class="mb-4 ratio ratio-16x9 mx-auto" style="max-width: 600px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12420396.41023212!2d172.48833!3d-40.534445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef0c00c1a19e9%3A0xe981df8c58dc8356!2sDewandran%20Transport%20Ltd!5e0!3m2!1sen!2sin!4v1735044584495!5m2!1sen!2sin" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
-            
-            
-
-            <!-- Fourth Section / Map / Business Info -->
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    
-                            <!-- Heading with glow effect -->
-                            <h2 class="mb-4" style="font-size: 2.2rem; font-weight: 700; color:#0d296b; text-align: center; text-transform: capitalize; text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);">
-                                Dewandran Transport Limited
-                            </h2>
-            
-                            <!-- Google Maps Embed -->
-                            <div class="mb-4 ratio ratio-16x9">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12420396.41023212!2d172.48833!3d-40.534445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef0c00c1a19e9%3A0xe981df8c58dc8356!2sDewandran%20Transport%20Ltd!5e0!3m2!1sen!2sin!4v1735044584495!5m2!1sen!2sin" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-            
-                            <!-- Contact Information -->
-                            <p class="fw-bold" style="color: #000000;">
-                                <i class="fas fa-truck" style="color: #0e1d3f; margin-right: 8px;"></i>Dewandran Transport Limited
-                            </p>
-                            <p style="color: #000000;">
-                                <i class="fas fa-map-marker-alt" style="color: #0e1d3f; margin-right: 8px;"></i>Auckland, New Zealand
-                            </p>
-                            <p style="color: #000000;">
-                                <i class="fas fa-phone-alt" style="color: #0e1d3f; margin-right: 8px;"></i>800685676 / 021701304
-                            </p>
-                        </div>
-                    </div>
-                
-            
-            
-
-        </div>
+            <p>
+                <strong>Dewandran Transport Limited</strong><br>
+                Auckland, New Zealand<br>
+                800685676 / 021701304
+            </p>
+        </section>
     </main>
 
-    <!-- Footer (unchanged) -->
-    <footer class="text-white bg-dark mt-5">
-        <div class="container py-4 py-lg-5">
+    <footer>
+        <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column mb-4 mb-md-0">  <h3 class="fs-6 text-white">Dewandran Transport Limited</h3>  <ul class="list-unstyled">    <li><a class="link-light" href="auckland-furniture-movers.html">Company Website</a></li>    <li><a class="link-light" href="https://www.dewandrantransport.co.nz/">https://www.dewandrantransport.co.nz/</a></li>    <li><a class="link-light" href=""></a></li>  </ul></div><div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column mb-4 mb-md-0">  <h3 class="fs-6 text-white">Useful Links</h3>  <ul class="list-unstyled">    <li><a class="link-light" href="">Expert Auckland Furniture Moving Services</a></li>    <li><a class="link-light" href="https://www.dewandrantransport.co.nz/">Reliable Furniture Movers in Auckland</a></li>    <li><a class="link-light" href="https://www.google.com/maps?ll=-40.534445,172.48833&z=4&t=m&hl=en&gl=IN&mapclient=embed&cid=16825975476712145750">Professional Care for Furniture Moves</a></li>  </ul></div><div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column mb-4 mb-md-0">  <h3 class="fs-6 text-white">Follow us on Social Media</h3>  <ul class="list-unstyled">    <li><a class="link-light" href="https://www.facebook.com/profile.php?id=100091097460162&mibextid=ZbWKwL">Facebook</a></li>    <li><a class="link-light" href="https://www.linkedin.com/company/dewandran-transport">Linkdin</a></li>    <li><a class="link-light" href=""></a></li>  </ul></div>
             </div>
@@ -276,22 +352,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- Small script to add/remove "scrolled" class on the header -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var header = document.getElementById("mainHeader");
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 50) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
-    });
-    </script>
-
 </body>
 </html>
